@@ -1,3 +1,5 @@
+# Copyright (c) 2021 Robert Lizee
+
 from __future__ import annotations
 from typing import List, Dict, Tuple, Union, Any, Callable
 
