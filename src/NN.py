@@ -1,3 +1,5 @@
+# Copyright (c) 2021 Robert Lizee
+
 from __future__ import annotations
 from numba import jit
 from numba.typed.typedlist import List as NList
