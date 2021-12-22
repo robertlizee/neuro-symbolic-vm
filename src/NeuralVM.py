@@ -692,8 +692,8 @@ class VM:
                 network.tick()
                 nb_ticks += 1
 
-            print(str(nb_ticks))
-            print(self.output_string)
+            print("Ticks = {0}".format(nb_ticks))
+            print("Result = '{0}'".format(self.output_string))
 
         self.execute = execute
 
