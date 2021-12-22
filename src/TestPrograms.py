@@ -3,7 +3,7 @@ from typing import List, Dict, Tuple, Union, Any, Callable
 
 from VMdef import *
 
-adder = flatten_code([
+test_programs = flatten_code([
     function(Label('read-number'), [ # returns value in r.out
         assign(t.false, r.r1), # init r.r1 to t.nil
 
