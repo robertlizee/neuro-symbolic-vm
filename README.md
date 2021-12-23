@@ -14,7 +14,7 @@ This is the code accompaning the research paper ...
 
 1. Creates 5000 prime attractors.
 2. Set the default for the neural hash table to 0.
-3. Binds in one shot using the neural hash table the function (i * j) % 5000 for i and j between 1 and 99.
+3. Binds in one shot using the neural hash table the function (i * j) % 5000 for i and j between 1 and 69.
 4. Test to see if there is any error.
 
 ### TestVM <a href="https://colab.research.google.com/github/robertlizee/neuro-symbolic-vm/blob/main/colab-notebooks/TestVM.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
