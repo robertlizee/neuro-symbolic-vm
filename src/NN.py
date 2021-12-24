@@ -372,7 +372,7 @@ class Layer(object):
         self.n : int = n
         self.states : np.array = np.zeros(n)
         self.next_states : np.array = np.zeros(n)
-        self.key : long = 0
+        self.key : int = 0
         self.binding = 0
         self.unbinding = 0
         self.leaking_factor = leaking_factor
@@ -507,8 +507,8 @@ class ConnectionWeights(object):
 
         self.weights : np.array = np.zeros(self.weights_output.shape)
 
-        self.current_cache : Dict[Union[long, Tuple[long, long]], np.array] = {}
-        self.previous_cache : Dict[Union[long, Tuple[long, long]], np.array] = {}
+        self.current_cache : Dict[int, np.array] = {}
+        self.previous_cache : Dict[int, np.array] = {}
     
     def train(self, 
             input_samples: PrimeAttractors, 
@@ -586,10 +586,10 @@ class ConnectionWeights(object):
         self.previous_cache = self.current_cache
         self.current_cache = {}
 
-    def cache(self, key: Union[long, Tuple[long, long]], value: np.array):
+    def cache(self, key: int, value: np.array):
         self.current_cache[key] = value
 
-    def get_cache(self, key: Union[long, Tuple[long, long]]) -> Union[np.array, None]:
+    def get_cache(self, key: int) -> Union[np.array, None]:
         if key in self.current_cache:
             return self.current_cache[key]
         elif key in self.previous_cache:
