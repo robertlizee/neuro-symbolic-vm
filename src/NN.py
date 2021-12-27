@@ -48,11 +48,11 @@ def snn_swap_states(states, next_states, leaking_factor):
         r = 1.0 - leaking_factor
         for i in range(N):
             v = states[i]
-            next_states[i] = 0.0 if v > 1.0 or v < 0.0 else r * v
+            next_states[i] = 0.0 if v >= 1.0 or v < 0.0 else r * v
     else:
         for i in range(N):
             v = states[i]
-            next_states[i] = 0.0 if v > 1.0 or v < 0.0 else v
+            next_states[i] = 0.0 if v >= 1.0 or v < 0.0 else v
 
 @jit(nopython=True)
 def snn_compute_hash(states):
