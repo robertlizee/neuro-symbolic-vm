@@ -1,6 +1,6 @@
 # neuro-symbolic-vm
 
-This is the code accompaning the research paper ...
+This is the code accompaning the research paper http://arxiv.org/abs/2205.13440 The Neuro-Symbolic Brain.
 
 ## Notebooks
 
